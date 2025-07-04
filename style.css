@@ -1,10 +1,9 @@
-:root{
-    --cor-fundo: #01080E ;
-    --cor-principal: #0B0D20 ;
-    --cor-secundaria: #212333; 
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
-
+:root {
+    --cor-fundo: #1A0033; /* Roxo bem escuro para o fundo */
+    --cor-principal: #330066; /* Roxo mais vibrante para a caixa principal */
+    --cor-secundaria: #5C00B3; /* Roxo um pouco mais claro para botões e elementos secundários */
+    --cor-destaque: #A033FF; /* Roxo brilhante para o destaque */
+    --cor-texto: #E6E6FA; /* Roxo bem claro, quase lavanda, para o texto */
 }
 
 body {
@@ -16,16 +15,19 @@ body {
     min-height: 100vh;
 }
 
-.caixa-principal{
+.caixa-principal {
     background-color: var(--cor-principal);
     width: 90%;
     max-width: 600px;
     text-align: center;
     padding: 20px;
+    border-radius: 10px; /* Adicionei um border-radius para suavizar as bordas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adicionei uma sombra para profundidade */
 }
 
-h1{
+h1 {
     color: var(--cor-destaque);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Adicionei uma leve sombra ao título */
 }
 
 button {
@@ -34,10 +36,13 @@ button {
     border: none;
     border-radius: 15px;
     padding: 15px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição mais suave */
+    cursor: pointer; /* Indica que o botão é clicável */
+    font-size: 1em; /* Ajusta o tamanho da fonte do botão */
 }
 
-button:hover{
+button:hover {
     background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+    color: var(--cor-principal); /* Garante que o texto mude para a cor principal (roxo vibrante) no hover */
+    transform: translateY(-2px); /* Efeito sutil de elevação no hover */
 }
